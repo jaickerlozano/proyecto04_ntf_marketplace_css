@@ -1,0 +1,258 @@
+@use './base/reset';
+@use './abstracts/variables' as var;
+
+body {
+    font-family: var.$font-base;
+    font-size: 16px;
+    background-image: linear-gradient(to right, var.$white-color 60%, var.$black-color 60%)
+}
+
+// Frame para trabajar
+.container {
+    max-width: var.$max-width-page;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+// Sección header
+.header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    gap: 156px;
+    margin-bottom: 40px;
+}
+
+.navPrincipal ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 56px;
+}
+
+.navPrincipal ul li a {
+    color: var.$black-color;
+    text-decoration: none;
+
+    &:hover {
+        color: var.$red-color;
+        text-decoration: underline;
+    }
+}
+
+.login {
+    margin-left: auto;
+}
+
+.login ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 56px;
+}
+
+.login ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var.$white-color;
+    padding: 10px 40px;
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: var.$red-color;
+    }
+
+    &.btn__login {
+        background-color: var.$red-color;
+
+        &:hover {
+            background-color: var.$white-color;
+            color: var.$red-color;
+        }
+    }
+}
+
+// Sección hero
+.hero {
+    display: flex;
+
+    .hero__contain {
+        width: 60%;
+    }
+
+}
+
+
+.hero__title {
+    margin-bottom: 70px;
+    padding-top: 50px;
+
+    h1 {
+        font-family: 'Belgrano', sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 9
+        0px;
+        margin-bottom: 12px;
+        background-image: url('../img/icon_focus.svg'); // Esta es la imagen que border la palabra largest
+        background-size: 31%;
+        background-repeat: no-repeat;
+        background-position: 22% 2%;
+    }
+
+    p {
+        font-size: 20px;
+        color: var.$light-gray-color;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        a {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 32px;
+            gap: 6px;
+    
+            &.btn__explore {
+                padding: 14px 80px;
+                background-color: var.$red-color;
+                text-decoration: none;
+                color: var.$white-color;
+            }
+    
+            &.btn__leanMore {
+                color: var.$black-color;
+            }
+        }
+    }
+}
+
+
+.collection {
+
+    h3 {
+        font-family: 'Belgrano', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    
+    .image-container {
+        display: flex;
+        gap: 30px;   
+
+        img {
+            width: 45%;
+            border: 1px solid var.$light-gray-color;
+            padding: 4px;
+        }
+    }
+    
+}
+
+.hero__numbers {
+    max-width: 35%;
+    margin-left: auto;
+
+    img{
+        max-width: 100%;
+        margin-left: auto;
+        padding: 16px;
+    }
+
+    .info {
+        background-color: var.$white-color;
+        padding: 32px;
+        margin-bottom: 30px;
+        margin-top: -24px;
+
+        .info__artist {
+            display: flex;
+            justify-content: start;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var.$light-gray-color;
+
+            img {
+                margin: 0;
+                width: 15%;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                &:last-child {
+                    margin-left: auto;
+                }
+
+                li:first-child {
+                    color: var.$light-gray-color;
+                    text-align: start;
+                }
+
+                li:last-child {
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .view-artist {
+            
+            a {
+                text-decoration: none;
+
+                &.bid-now {
+                    display: inline-block;
+                    padding: 10px 80px;
+                    background-color: var.$red-color;
+                }
+    
+                &.view-artwork {
+                    display: inline-block;
+                    margin-left: 55px;
+                }
+
+            }
+        }
+
+    }
+
+    .numbers {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            h3 {
+                font-size: 26px;
+                font-weight: 600;
+                color: var.$red-color;
+            }
+
+            p {
+                color: var.$white-color;
+            }
+        }
+    }
+
+}
